@@ -56,21 +56,22 @@ import math
 # 6) Use the drawsquare function we wrote in this chapter in a program to draw the image
 # shown below. Assume each side is 20 units. (Hint: notice that the turtle has already
 # moved away from the ending point of the last square when the program ends.)
+dr = turtle.Turtle()
+wn = turtle.Screen()
+def draw_Square(sides,x,y):
 
-# def draw_Square():
-#     dr = turtle.Turtle()
-#     wn = turtle.Screen()
-#     wn.bgcolor("lightgreen")
-#
-#     dr.color("hotpink")
-#     for i in range(5):
-#         for j in range(4):
-#             dr.forward(20)
-#             dr.left(90)
-#         dr.penup()
-#         dr.forward(40)
-#         dr.pendown()
-#     wn.exitonclick()
+    wn.bgcolor("lightgreen")
+
+    dr.color("hotpink")
+
+    dr.penup()
+    dr.goto(x,y)
+    dr.pendown()
+
+    for i in range(4):
+        dr.forward(sides)
+        dr.left(90)
+
 # draw_Square()
 
 
@@ -78,20 +79,7 @@ import math
 # shown below. Assume each side is 20 units. (Hint: notice that the turtle has already
 # moved away from the ending point of the last square when the program ends.
 
-def draw_Square2():
-    dr = turtle.Turtle()
-    wn = turtle.Screen()
+for i in range(1,5):
+    draw_Square(20*i,-10*i,-10*i)
 
-
-
-    for i in range(1,6):
-        for j in range(4):
-            dr.forward(20*i)
-            dr.right(90)
-        dr.penup()
-        dr.goto(-10*i,10*i)
-        dr.pendown()
-
-    wn.exitonclick()
-
-draw_Square2()
+wn.exitonclick()
