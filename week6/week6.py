@@ -33,7 +33,8 @@ def spiral(alex,amount,sizes,angle):
     for i in range(amount*4):
         alex.forward(sizes*i)
         alex.right(angle)
-
+        
+# spiral(drawer,10,3,90)
 # spiral(drawer,20,3,89)
 # wn.exitonclick()
 
